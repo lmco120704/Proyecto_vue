@@ -3,7 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import LocationView from '../views/LocationView.vue'
 import ContactView from '../views/ContactView.vue'
 import CartView from '../views/CartView.vue'
-
+import CompareView from '../views/CompareView.vue';
+import TestDriveView from "../views/TestDriveView.vue";
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL), // 👈 cambia aquí también
   routes: [
@@ -26,6 +27,15 @@ const router = createRouter({
       path: '/carrito',
       name: 'carrito',
       component: CartView
+    },
+    { path: '/compare', 
+      name: 'compare', 
+      component: CompareView 
+    },
+    {
+      path: "/test-drive",
+      name: "test-drive",
+      component: TestDriveView
     }
   ]
 })

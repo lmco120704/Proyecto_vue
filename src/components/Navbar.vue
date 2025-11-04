@@ -20,6 +20,12 @@
           <li class="nav-item">
             <RouterLink class="nav-link" to="/carrito">Carrito</RouterLink>
           </li>
+          <li class="nav-item">
+            <router-link to="/compare" class="nav-link">Comparador</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/test-drive" class="nav-link">Prueba de Manejo</router-link>
+          </li>
         </ul>
       </div>
     </div>
