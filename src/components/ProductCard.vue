@@ -5,14 +5,17 @@
       <div class="card-body text-center">
         <h5 class="card-title">{{ title }}</h5>
         <p class="card-text">{{ price }}</p>
-        <a href="#" class="btn btn-outline-primary">Agregar al Carrito</a>
+        <button @click="addToCart" class="btn btn-outline-primary">Agregar al Carrito</button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { cart } from '../store/cart.js'
+import Swal from 'sweetalert2'
+
+const props = defineProps({
   imageUrl: {
     type: String,
     required: true
@@ -26,4 +29,18 @@ defineProps({
     required: true
   }
 })
+
+const addToCart = () => {
+  cart.add({
+    imageUrl: props.imageUrl,
+    title: props.title,
+    price: props.price
+  })
+  Swal.fire({
+    title: '¡Vehículo agregado!',
+    text: `${props.title} ha sido agregado al carrito.`,
+    icon: 'success',
+    confirmButtonText: 'Ok'
+  })
+}
 </script>

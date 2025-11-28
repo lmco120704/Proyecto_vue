@@ -40,12 +40,12 @@ const enviarSolicitud = async () => {
       <form @submit.prevent="enviarSolicitud">
         <div class="mb-3">
           <label class="form-label">Nombre completo</label>
-          <input v-model="nombre" type="text" class="form-control" placeholder="Ej. Luis Candanedo" />
+          <input v-model="nombre" type="text" class="form-control" placeholder="Ej. Angel Fernanez" />
         </div>
 
         <div class="mb-3">
           <label class="form-label">Correo electrónico</label>
-          <input v-model="correo" type="email" class="form-control" placeholder="Ej. luis@mail.com" />
+          <input v-model="correo" type="email" class="form-control" placeholder="Ej. example@mail.com" />
         </div>
 
         <div class="mb-3">
